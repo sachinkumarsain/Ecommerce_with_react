@@ -147,3 +147,98 @@ header h2 a span {
     background-color: azure;
     height: 60%;
 }
+
+.carts {
+    background: #ADA996;
+    width: 100%;
+    
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.cart {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+}
+
+.cart .cartitems {
+    display: flex;
+    background-color: white;
+    border-radius: 4px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px 1px rgb(66, 66, 66);
+    width: 80%;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.cart .cartitems .left {
+    width: 45%;
+}
+
+.cart .cartitems .right {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: justify;
+}
+.cart .cartitems .right h1{
+    font-size: 40px;
+}
+
+.cart .cartitems .right h1,
+.cart .cartitems .right h2,
+.cart .cartitems .right h3 span ,
+.cart .cartitems .right a,
+.cart .cartitems .right p
+ {
+    margin: 10px 0;
+}
+
+.cart .cartitems .right h2 {
+    font-size: 27px;
+}
+
+.cart .cartitems .right h3 span {
+    margin: 0px 20px;
+    font-size: 25px;
+}
+
+.cart .cartitems .right a {
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #201f1f;
+    color: white;
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+.cart .cartitems .right a:hover {
+    background-color: #060505;
+    color: #ffffff;
+
+}
+
+.cart .cartitems .left p {
+    margin-bottom: 30px;
+}
+
+.cart .cartitems .left img {
+    width: 90%;
+
+}
