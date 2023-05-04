@@ -1,24 +1,124 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-.container{
-    width: 100%;
+header h1{
+    color: white;
 }
-.products{
+
+header,
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    list-style: none;
+
+}
+
+header {
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+header ul li{
+    margin: 0px 10px;
+}
+header ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+
+}
+
+header h2 a {
+    text-decoration: none;
+    color: white;
+}
+
+header h2 a span {
+    padding: 15px 20px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    box-shadow: 0px 0px 8px 2px rgb(183, 181, 181);
+}
+
+.container {
     width: 100%;
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-color: azure;
+}
+
+.products {
+    width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
-.product{
-    width: 30%;
-    height: 700px;
+
+.product {
+    width: 22%;
+    text-align: center;
+    padding: 15px;
+    height: 550px;
+    box-shadow: 0 0 5px 2px gray;
+    background-color: white;
     margin: 20px;
+    border-radius: 4px;
+    transition: all 0.5s ease;
 }
-.product img{
- width:100%;
- height:60%;
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product h1 {
+    font-size: 27px;
+    text-align: center;
+}
+
+.product p {
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+.product .rating {
+    text-align: center;
+}
+
+.product a {
+    text-decoration: none;
+    background-color: orangered;
+    color: white;
+    box-shadow: 0 0 4px 1px gray;
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 26px;
+    transition: all 0.5s ease;
+}
+
+.product a:hover {
+    transform: scale(1.06);
+}
+
+.product img {
+    width: 100%;
+    background-color: azure;
+    height: 60%;
 }
