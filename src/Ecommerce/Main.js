@@ -3,6 +3,7 @@ import axios from 'axios'
 import "./Ecommerce.css"
 import { ecommerceContext } from './Home'
 import Cart from './Cart'
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 // import "../images"
 function Main() {
   const [products, setProducts] = useState([])
@@ -32,7 +33,7 @@ function Main() {
     e.preventDefault()
     cart.forEach((c)=>{
       if(c.id===index){
-        
+
       }
     })
   }
@@ -64,7 +65,7 @@ function Main() {
                   <h1>{tiTleExtra(product.title)}</h1>
                   <img src={product.image}></img>
                   <h2 className='rating'>Rate:-{product.rating.rate} count:-{product.rating.count}</h2>
-                  <h2>price:-{product.price}</h2>
+                  <h2>< CurrencyRupeeIcon/>{product.price}</h2>
                   <p>{extraWord(product.description)}</p>
                   <h3>
                     {exitInCart(product.id) ? (<a href='#' onClick={(e)=>{handlerDeleteToCard(e,index)}}>Added To Card</a>) : (<a href='' onClick={(e) => { handlerAddToCart(e, index) }}>Add To Cart</a>)

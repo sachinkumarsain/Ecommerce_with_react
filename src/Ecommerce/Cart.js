@@ -1,13 +1,15 @@
 import React, { useContext, useState } from 'react'
 import { ecommerceContext } from './Home'
-import { Link } from 'react-router-dom'
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 function Cart() {
-  const { cart, setCart } = useContext(ecommerceContext)
-  function handlerDeletecart(e, item) {
+  const { cart, setcart } = useContext(ecommerceContext)
+  function handlerDeleteInCard(e, item) {
     e.preventDefault()
-    setCart(cart.filter(cartItem => cartItem.id !== item.id))
+    console.log(item)
+    setcart(cart.filter(cartItem =>cartItem.id !== item ))
+   
   }
 
   return (
@@ -24,7 +26,7 @@ function Cart() {
                 <div className='right'>
                   <h4>{item.title}</h4>
                   <p>{item.price}</p>
-                  <Link onClick={(e) => handlerDeletecart(e, item)} />
+                 <a href=' 'onClick={(e)=>{handlerDeleteInCard(e,item.id)}}>Delete< DeleteIcon /></a>
                 </div>
               </div>
             )
