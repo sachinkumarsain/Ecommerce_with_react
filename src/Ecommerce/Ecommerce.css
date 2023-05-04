@@ -3,8 +3,18 @@
     margin: 0;
     box-sizing: border-box;
 }
-header h1{
-    color: white;
+
+header h1 {
+    color: #ffffff;
+    padding: 5px 35px;
+    border-radius: 50%;
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 header,
@@ -18,20 +28,17 @@ header ul {
 }
 
 header {
-    background: #000000;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #434343, #000000);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #434343, #000000);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    position: fixed;
+    width: 100%;
 }
-header ul li{
+
+header ul li {
     margin: 0px 10px;
 }
-header ul li a{
+
+header ul li a {
     text-decoration: none;
-    color: white;
+    color: #000000;
     font-size: 22px;
 
 }
@@ -61,6 +68,12 @@ header h2 a span {
 
     background-color: azure;
 }
+
+.image {
+    height: 100vh;
+    background: url("../images/eC1.jpg") no-repeat scroll center/cover;
+}
+
 
 .products {
     width: 100%;
@@ -103,7 +116,12 @@ header h2 a span {
 
 .product a {
     text-decoration: none;
-    background-color: orangered;
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     box-shadow: 0 0 4px 1px gray;
     padding: 5px 20px;
@@ -115,6 +133,13 @@ header h2 a span {
 
 .product a:hover {
     transform: scale(1.06);
+    background: #221f1f;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #060505, #535252);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #201f1f, #6a6969);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .product img {

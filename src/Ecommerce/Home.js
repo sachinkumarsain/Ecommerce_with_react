@@ -12,15 +12,13 @@ function Home() {
     return (
         <>
             <ecommerceContext.Provider value={{ cart, setcart }}>
-
                 <BrowserRouter>
                     <Header />
                     <Routes>
-                        <Route path="/" element={<Main />}> </Route>
+                        <Route path="/" element={<Main/>}> </Route>
                         <Route path="/about" element={<About />}>  </Route>
                         <Route path="/cart" element={<Cart />}>  </Route>
                     </Routes>
-                    <Main />
                 </BrowserRouter>
             </ecommerceContext.Provider>
         </>
