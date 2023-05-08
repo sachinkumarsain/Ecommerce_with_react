@@ -4,10 +4,16 @@ import "./Ecommerce.css"
 import { ecommerceContext } from './Home'
 import Cart from './Cart'
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import { json } from 'react-router'
 // import "../images"
 function Main() {
   const [products, setProducts] = useState([])
+  const [randomProduct, setrandomProduct]=useState([])
   const { cart, setcart } = useContext(ecommerceContext)
+
+  useEffect(()=>{
+    localStorage.setItem("product",JSON.stringify(cart))
+  },[cart])
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products")
       .then((result) => {
@@ -48,13 +54,21 @@ function Main() {
     })
     return exits
   }
+  function setrandom(){
+  setrandomProduct(products[Math.floor(Math.random()*products.length)]);
+  console.log(randomProduct)
+  console.log(randomProduct)
+}
+
   
 
   return (
     <>
       <div className='container'>
         <div className='image'>
-
+          {
+            setrandom()
+          }
         </div>
         <h1>products</h1>
         <div className='products'>
