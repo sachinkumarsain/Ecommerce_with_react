@@ -10,6 +10,9 @@ function Banner() {
             .then((result) => {
                 setBanner(result.data[Math.floor(Math.random() * result.data.length)])
                 console.log(result.data)
+                Window.onscroll=()=>{
+                    setBanner(window.scrollY>700?true:false)
+                }
             })
     }, [])
     return (

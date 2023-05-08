@@ -31,12 +31,14 @@ header {
     position: fixed;
     z-index: 3;
     width: 100%;
-    background: #dbd5d5;
+    background: #ADA996;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #efebeb, #968989);
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #a08e8e, #e2dada);
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
 }
 
 header ul li {
@@ -52,7 +54,15 @@ header ul li a {
 
 header h2 a {
     text-decoration: none;
-    color: white;
+    color: black;
+}
+.dark{
+    background: #83837f;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9a9191, #a8a4a4, #868080, #ADA996);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b6b3b3, #969494, #ada9a9, #9c9b94);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header h2 a span {
