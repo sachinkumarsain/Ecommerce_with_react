@@ -8,7 +8,7 @@ import { json } from 'react-router'
 // import "../images"
 function Main() {
   const [products, setProducts] = useState([])
-  const [randomProduct, setrandomProduct]=useState([])
+
   const { cart, setcart } = useContext(ecommerceContext)
 
   useEffect(()=>{
@@ -54,22 +54,13 @@ function Main() {
     })
     return exits
   }
-  function setrandom(){
-  setrandomProduct(products[Math.floor(Math.random()*products.length)]);
-  console.log(randomProduct)
-  console.log(randomProduct)
-}
 
   
 
   return (
     <>
       <div className='container'>
-        <div className='image'>
-          {
-            setrandom()
-          }
-        </div>
+        
         <h1>products</h1>
         <div className='products'>
           {

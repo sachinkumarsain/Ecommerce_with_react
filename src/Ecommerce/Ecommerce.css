@@ -29,7 +29,14 @@ header ul {
 
 header {
     position: fixed;
+    z-index: 3;
     width: 100%;
+    background: #dbd5d5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #efebeb, #968989);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a08e8e, #e2dada);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header ul li {
@@ -69,9 +76,40 @@ header h2 a span {
     background-color: azure;
 }
 
-.image {
+.banner {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
    
+}
+.banner .leftSaide,.banner .rightSaide{
+    width: 45%;
+    height: 90%;
+}
+.banner .leftSaide,.banner .rightSaide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.banner .leftSaide h1{
+    font-size: 45px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.banner .leftSaide h2{
+ font-size: 30px;
+}
+.banner .leftSaide p{
+    font-size: 19px;
+    text-align: justify;
+}
+
+.banner .rightSaide img{
+    width: 80%;
+    height: 90%;
 }
 
 
@@ -98,6 +136,7 @@ header h2 a span {
 
 .product:hover {
     transform: scale(1.05);
+    z-index: 2;
 }
 
 .product h1 {

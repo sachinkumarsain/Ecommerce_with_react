@@ -5,7 +5,9 @@ import About from './About'
 import "./Ecommerce.css"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Cart from './Cart'
+import Banner from "./Banner"
 export const ecommerceContext = createContext({})
+
 
 function Home() {
     const [cart, setcart] = useState(JSON.parse(localStorage.getItem("product")!==null) ? JSON.parse(localStorage.getItem("product")):[])
@@ -15,6 +17,7 @@ function Home() {
             <ecommerceContext.Provider value={{ cart, setcart }}>
                 <BrowserRouter>
                     <Header />
+                    <Banner/>
                     <Routes>
                         <Route path="/" element={<Main/>}> </Route>
                         <Route path="/about" element={<About />}>  </Route>
