@@ -5,6 +5,7 @@ import { ecommerceContext } from './Home'
 import Cart from './Cart'
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import { json } from 'react-router'
+import Banner from './Banner'
 // import "../images"
 function Main() {
   const [products, setProducts] = useState([])
@@ -37,11 +38,16 @@ function Main() {
   }
   function handlerDeleteToCard(e,index){
     e.preventDefault()
-    cart.forEach((c)=>{
-      if(c.id===index){
-
-      }
+    // cart.forEach((c)=>{
+    //   if(c.id!==index){
+    //     return(c)
+    //   }
+    //   console.log(cart)
+    // })
+    cart.filter((e)=>{
+      return e.id===index
     })
+    
   }
   console.log(cart)
 
@@ -50,6 +56,9 @@ function Main() {
     cart.forEach((e) => {
       if (e.id === productId) {
         exits = true
+      }
+      else{
+        exits = false
       }
     })
     return exits
@@ -60,7 +69,7 @@ function Main() {
   return (
     <>
       <div className='container'>
-        
+      <Banner/>
         <h1>products</h1>
         <div className='products'>
           {
@@ -73,7 +82,7 @@ function Main() {
                   <h2>< CurrencyRupeeIcon/>{product.price}</h2>
                   <p>{extraWord(product.description)}</p>
                   <h3>
-                    {exitInCart(product.id) ? (<a href='#' onClick={(e)=>{handlerDeleteToCard(e,index)}}>Added To Card</a>) : (<a href='' onClick={(e) => { handlerAddToCart(e, index) }}>Add To Cart</a>)
+                    {exitInCart(product.id) ? (<a href='' onClick={(e)=>{handlerDeleteToCard(e,index)}}>Added To Card</a>) : (<a href='' onClick={(e) => { handlerAddToCart(e, index) }}>Add To Cart</a>)
                   }
                   </h3>
                 </div>

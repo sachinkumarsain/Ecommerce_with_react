@@ -57,12 +57,15 @@ header h2 a {
     color: black;
 }
 .dark{
-    background: #83837f;
+    background: #525252;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #9a9191, #a8a4a4, #868080, #ADA996);
+    background: -webkit-linear-gradient(to right, #4b4949, #676464, #868080, #ADA996);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #b6b3b3, #969494, #ada9a9, #9c9b94);
+    background: linear-gradient(to right, #e4cbcb, #969494, #696767, #9c9b94);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.dark a{
+    color: white;
 }
 
 header h2 a span {
@@ -91,6 +94,7 @@ header h2 a span {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
     padding-top: 40px;
    
 }
